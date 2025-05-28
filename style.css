@@ -1,0 +1,343 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #001f3f; /* Navy Blue */
+  color: #d3d3d3; /* Light Gray */
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #d3d3d3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #7abaff; /* lighter blue */
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+header {
+  background-color: #003366; /* darker navy */
+  padding: 1rem 0;
+  border-bottom: 2px solid #7abaff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #7abaff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: default;
+}
+nav a {
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #d3d3d3;
+}
+nav a:hover {
+  color: #7abaff;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 90vh;
+  padding-top: 3rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #7abaff;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: #c0c0c0;
+}
+.btn-primary {
+  background-color: #7abaff;
+  color: #001f3f;
+  padding: 0.8rem 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.btn-primary:hover {
+  background-color: #4d7db6;
+}
+
+/* Section Titles */
+h2.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7abaff;
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+/* About Section */
+.about p {
+  max-width: 850px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  color: #c0c0c0;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Features & Benefits Grid */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.card {
+  background: #003366;
+  padding: 1.8rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #00264d;
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 0 15px #7abaff;
+}
+.card i {
+  font-size: 2.8rem;
+  color: #7abaff;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+}
+.card h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #7abaff;
+  text-align: center;
+}
+.card p {
+  font-size: 1rem;
+  color: #c0c0c0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: #00264d;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  color: #c0c0c0;
+}
+.testimonial-item {
+  margin-bottom: 2rem;
+  font-style: italic;
+  position: relative;
+  padding-left: 3rem;
+  line-height: 1.6;
+}
+.testimonial-item::before {
+  content: "\f10d"; /* FontAwesome quote-left */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2rem;
+  color: #7abaff;
+  opacity: 0.3;
+}
+.testimonial-author {
+  font-weight: 700;
+  margin-top: 0.7rem;
+  color: #7abaff;
+  font-style: normal;
+  text-align: right;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #c0c0c0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer Styling */
+.main-footer {
+  background-color: #003366;
+  border-top: 2px solid #7abaff;
+  color: #d3d3d3;
+  font-size: 0.9rem;
+  padding: 3rem 0 1.5rem;
+  user-select: none;
+  box-shadow: inset 0 1px 10px #7abaff44;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer-column h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #7abaff;
+  margin-bottom: 1rem;
+  letter-spacing: 1.3px;
+  border-left: 4px solid #7abaff;
+  padding-left: 0.8rem;
+}
+
+.footer-column p,
+.footer-column li,
+.footer-column a {
+  color: #d3d3d3;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.footer-column p i,
+.footer-column li i {
+  margin-right: 0.6rem;
+  color: #7abaff;
+  filter: drop-shadow(0 0 2px #7abaff);
+  vertical-align: middle;
+}
+
+.footer-column a:hover {
+  color: #a9cfff;
+  text-decoration: underline;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.7rem;
+}
+
+/* Social Media */
+.social-icons a {
+  font-size: 1.8rem;
+  margin-right: 1.2rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.social-icons a.twitter {
+  color: #1da1f2;
+  filter: drop-shadow(0 0 4px #1da1f2);
+}
+.social-icons a.twitter:hover {
+  filter: drop-shadow(0 0 8px #1da1f2);
+  transform: scale(1.2);
+}
+
+.social-icons a.facebook {
+  color: #3b5998;
+  filter: drop-shadow(0 0 4px #3b5998);
+}
+.social-icons a.facebook:hover {
+  filter: drop-shadow(0 0 8px #3b5998);
+  transform: scale(1.2);
+}
+
+.social-icons a.linkedin {
+  color: #0077b5;
+  filter: drop-shadow(0 0 4px #0077b5);
+}
+.social-icons a.linkedin:hover {
+  filter: drop-shadow(0 0 8px #0077b5);
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #00264d;
+  padding-top: 1rem;
+  text-align: center;
+  color: #7abaff;
+  font-size: 0.85rem;
+  letter-spacing: 0.8px;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.85rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer-column {
+    min-width: 100%;
+  }
+}
